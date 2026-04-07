@@ -9,7 +9,7 @@ A clean, minimal full-stack notes application built with **FastAPI**, **React**,
 | Layer      | Technology                        |
 |------------|-----------------------------------|
 | Frontend   | React (Vite) + Tailwind CSS       |
-| Backend    | Python (FastAPI) + Psql           |
+| Backend    | Python                            |
 | Database   | PostgreSQL                        |
 
 ---

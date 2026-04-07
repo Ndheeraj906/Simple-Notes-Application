@@ -31,40 +31,55 @@ A clean, minimal full-stack notes application built with **FastAPI**, **React**,
 ## 📁 Project Structure
 
 ```
-simple-notes/
+SIMPLE NOTES/
 │
 ├── backend/
-│   ├── main.py              # FastAPI entry point, CORS config
-│   ├── database.py          # DB engine, session management
-│   ├── models.py            # SQLAlchemy model + Pydantic schemas
-│   ├── routes.py            # API route handlers
-│   └── requirements.txt     # Python dependencies
+│   ├── main.py                          # FastAPI app & CORS config
+│   ├── database.py                      # SQLAlchemy setup (PostgreSQL)
+│   ├── models.py                        # ORM models & Pydantic schemas
+│   ├── routes.py                        # API endpoints (/notes/)
+│   ├── requirements.txt                 # Python dependencies
+│   └── __pycache__/                     # (Can delete - auto-generated)
 │
 ├── frontend/
-│   ├── index.html
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   └── src/
-│       ├── main.jsx          # React entry point
-│       ├── App.jsx           # Root component with state management
-│       ├── index.css         # Global styles + shadcn/ui CSS variables
-│       ├── api/
-│       │   └── notes.js      # API client (fetch wrapper)
-│       ├── lib/
-│       │   └── utils.js      # Tailwind merge utility
-│       └── components/
-│           ├── NoteForm.jsx   # Create note form
-│           ├── NoteCard.jsx   # Individual note card
-│           ├── NoteList.jsx   # Notes grid layout
-│           └── ui/            # shadcn/ui primitives
-│               ├── button.jsx
-│               ├── input.jsx
-│               ├── textarea.jsx
-│               └── card.jsx
+│   ├── index.html                       # Entry HTML file
+│   ├── package.json                     # NPM dependencies
+│   ├── package-lock.json                # Lock file
+│   ├── vite.config.js                   # Vite configuration
+│   ├── tailwind.config.js               # Tailwind CSS config
+│   ├── postcss.config.js                # PostCSS config
+│   ├── jsconfig.json                    # (Optional - can delete)
+│   │
+│   ├── public/
+│   │   └── vite.svg                     # (Optional - can delete)
+│   │
+│   ├── src/
+│   │   ├── main.jsx                     # React entry point
+│   │   ├── App.jsx                      # Main app component
+│   │   ├── index.css                    # Global styles
+│   │   │
+│   │   ├── api/
+│   │   │   └── notes.js                 # API calls (fetchNotes, createNote, deleteNote)
+│   │   │
+│   │   ├── components/
+│   │   │   ├── NoteList.jsx             # Display all notes
+│   │   │   ├── NoteCard.jsx             # Individual note card
+│   │   │   ├── NoteForm.jsx             # Add note form
+│   │   │   │
+│   │   │   └── ui/
+│   │   │       ├── button.jsx           # Button component
+│   │   │       ├── card.jsx             # Card component
+│   │   │       ├── input.jsx            # Input component
+│   │   │       └── textarea.jsx         # Textarea component
+│   │   │
+│   │   └── lib/
+│   │       └── utils.js                 # Utility functions
+│   │
+│   └── node_modules/                    # (Auto-installed by npm)
 │
-└── README.md
+├── .venv/                               # Python virtual environment
+├── README.md                            # Project documentation
+└── .git/                                # (Optional - version control)
 ```
 
 ---

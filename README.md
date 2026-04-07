@@ -8,8 +8,8 @@ A clean, minimal full-stack notes application built with **FastAPI**, **React**,
 
 | Layer      | Technology                        |
 |------------|-----------------------------------|
-| Frontend   | React (Vite) + shadcn/ui + Tailwind CSS |
-| Backend    | Python (FastAPI) + SQLAlchemy     |
+| Frontend   | React (Vite) + Tailwind CSS       |
+| Backend    | Python (FastAPI) + Psql           |
 | Database   | PostgreSQL                        |
 
 ---
@@ -90,7 +90,7 @@ CREATE DATABASE simple_notes;
 Then update the connection string in `backend/database.py` with your PostgreSQL password:
 
 ```python
-DATABASE_URL = "postgresql://postgres:YOUR_PASSWORD@localhost:5432/simple_notes"
+DATABASE_URL = "postgresql://postgres:admin123@localhost:5432/simple_notes"
 ```
 
 > **Note:** If your password contains special characters like `@`, URL-encode them (e.g., `@` → `%40`).
@@ -162,10 +162,4 @@ The app will be live at **http://localhost:5173**
 - 🌙 Dark mode toggle
 - 📱 Mobile-optimized layout
 - 🔐 User authentication
-- 📤 Export notes as PDF or Markdown
-
----
-
-## 📄 License
-
-This project is open-source and available under the [MIT License](LICENSE).
+- 📤 Export notes as PDF or Markdown and share option

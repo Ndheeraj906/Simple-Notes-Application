@@ -2,7 +2,7 @@
 
 A clean, minimal full-stack notes application built with **FastAPI**, **React**, and **PostgreSQL**. Create, view, and delete notes through a polished UI — no authentication, no fluff, just notes.
 
----
+**Live Demo:** [https://simple-notes-app-478532845626.us-central1.run.app](https://simple-notes-app-478532845626.us-central1.run.app)
 
 ## 🛠️ Tech Stack
 
